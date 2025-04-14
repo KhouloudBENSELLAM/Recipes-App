@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --background-color: #fff;
+  --background-light: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: rgb(255, 0, 86);
+  --text-color: #0A0A0A;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+}
+
+.recipes-card {
+  max-width: 370px;
+  background: var(--background-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .recipe-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px var(--shadow-color);
+    }
+  }
+
+  .header {
+    h2 {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+    }
+
+    h4 {
+      font-size: 1rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:nth-child(1) {
+        background: var(--primary-color);
+        color: #fff;
+
+        &:hover {
+          background: var(--primary-color);
+        }
+      }
+
+      &:nth-child(2) {
+        background: var(--text-light);
+        color: #fff;
+
+        &:hover {
+          background: var(--text-light);
+        }
+      }
+
+      &:nth-child(3) {
+        background: #d9534f;
+        color: #fff;
+
+        &:hover {
+          background: darken(#d9534f, 10%);
+        }
+      }
+    }
+  }
+}

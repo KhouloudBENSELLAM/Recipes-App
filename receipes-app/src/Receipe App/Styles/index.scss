@@ -1,0 +1,383 @@
+@import "AboutUs.scss";
+@import "Animations.scss";
+@import "Culinary skills.scss";
+@import "Settings.scss";
+@import "SideBarActions.scss";
+@import "RecipeDetails.scss";
+@import "RecipeList.scss";
+@import "RecipeCard.scss";
+@import "RecipeForm.scss";
+@import "ReviewsSlider.scss";
+
+:root{
+    --background-color:#fff;
+    --background-light:#fff;
+    --shadow-color:rgba(0,0,0,0.2);
+    --primary-color:rgb(255, 0, 86);
+    --text-color:#0A0A0A;
+    --text-light:#575757;
+    --font-size: 16px;
+    --animation-speed:1;
+    
+    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+    color: var(--background-color);
+    font-size: var(--font-size);
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    margin-left: 150px;
+  }
+  
+  .hero-text {
+    text-align: start;
+    max-width: 900px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.8rem;
+    color: #2c3e50;
+    margin-bottom: 70px;
+    font-weight: 600;
+    margin-top: -20px;
+    
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    line-height: 42px;
+    text-align: center;
+
+  }
+  
+  .primary-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .primary-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .hero-images {
+    display: flex;
+    gap: 15px;
+    margin-left: 250px;
+  }
+  
+  .hero-images .main-image img {
+    width: 310px;
+    height: 320px;
+    object-fit: cover;
+    border-radius:  90px 0 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-images .main-image .second{
+    width: 310px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0 90px ;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+  
+  .hero-images .side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hero-images .side-images img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 90px 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-images .side-images .first{
+    width: 220px;
+    height: 270px;
+    object-fit: cover;
+    border-radius:  0  90px 0 0 ;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 6px;
+  }
+  
+  @media screen and (max-width: 768px){
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+    }
+    .hero-images {
+        margin-left: -50px;
+    }
+    .chief-card{
+      box-shadow: 0 5px 10px var(--shadow-color);
+    }
+    .section.chiefs{
+      margin-left: -20px;
+    }
+    .top-chiefs-container{
+      display: flex;
+      flex-direction: column;
+    }
+    .container{
+      padding-inline: 6vw;
+    }
+    .footer{
+      grid-template-columns: repeat(4, 1fr);
+      .footer-section:nth-child(1){
+        grid-column: span 4;
+      }
+      .footer-section:nth-child(2), .footer-section:nth-child(3){
+        grid-column: span 2;
+      }
+    }
+}
+
+
+
+
+.section.quote{
+  display: block;
+  margin-left: 360px;
+  margin-right: 30px;
+  margin-top: 30px;
+  width: 74%;
+  .quote-text{
+    font-size: 1.7em;
+    line-height: 1.3;
+    color: var(--text-color);
+    text-align: left;
+    svg{
+      color: var(--primary-color);
+      font-size: 1.5em;
+      margin-right: .5em;
+    }
+  }
+  .quote-auther{
+    color: var(--text-light);
+    text-align: right;
+    margin-top: 1em;
+  }
+}
+
+// Our Top Chief section design
+.section.chiefs {
+  display: block;
+  margin-left: 190px;
+  width: 800px;
+  margin-top: 70px;
+  .title {
+    text-align: left;
+    margin-left: 150px;
+    font-size: 3.8rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+}
+
+.top-chiefs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // ✅ 2 colonnes
+  grid-template-rows: repeat(3, auto);  // ✅ 3 lignes (ajustées automatiquement en hauteur)
+  // grid-gap: 1.7em;
+  // column-gap: .1em;
+  gap: 20px;
+  margin-left: 180px;
+}
+
+
+.chief-card {
+  display: flex;
+  height: 180px;
+  background-color: var(--background-color); 
+  border-radius: 5px;
+  overflow: hidden;
+  width: 580px;
+  box-sizing: border-box;
+  margin-right: 200px;
+
+  img {
+    height: 100%;
+    max-height: 310px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+  }
+
+  .chief-card-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    padding-top: 12px;
+    padding-left: 1em;
+    line-height: 30px;
+
+    .chief-card-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: var(--text-color);
+      text-align: left;
+    }
+
+    .chief-recipe-count, 
+    .chief-cuisine {
+      font-size: 1.25em;
+      color: var(--text-light);
+      text-align: left;
+    }
+
+    .chief-icons {
+      font-size: 1.4em; 
+      margin-top: 5px;
+
+      svg {
+        margin-right: .5em;
+
+        &:nth-child(1) {
+          color: #0063f7;
+        }
+
+        &:nth-child(2) {
+          color: #13b4ff;
+        }
+
+        &:nth-child(3) {
+          color: #ff0056;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-chiefs-container {
+    display: flex;
+    flex-direction: column; // Affiche les cartes en colonne
+    align-items: center;
+    gap: 1.5em; // Ajoute un espacement entre les cartes
+    margin-left: -230px;
+
+  }
+  .section.chiefs .title{
+    margin-left: -110px;
+  }
+  .chief-card {
+    width: 55%; // Ajuste la largeur pour s'adapter aux écrans plus petits
+    flex-direction: row; // Change l'affichage des cartes en colonne
+    height: auto; // Permet aux cartes de s'adapter dynamiquement
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      max-width: 180px; // Ajuste la taille de l'image
+      height: 160px;
+    }
+
+    .chief-card-info {
+      padding-left: 0;
+      padding-top: 10px;
+
+      .chief-card-name {
+        font-size: 1.5em;
+        margin-left: 26px;
+      }
+
+      .chief-recipe-count, 
+      .chief-cuisine {
+        font-size: 1.1em;
+        margin-left: 26px;
+
+      }
+
+      .chief-icons {
+        font-size: 1.1em;
+        
+      }
+    }
+  }
+  .section.quote{
+    margin-left: 110px;
+  }
+}
+
+.footer{
+  background-color: #0f0f0f;
+  color: #fff;
+  margin-top: 70px;
+  padding: 4em;
+  padding-left: 8em;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1.5em;
+  .footer-section{
+    margin-left: 2em;
+    p{
+      opacity: .9;
+      margin-bottom: .5em;
+      font-size: 1.2em;
+    }
+    p b{
+      color: var(--primary-color);
+    }
+    p.title{
+      opacity: 1;
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px){
+  .container{
+    padding-inline: 18vw;
+  }
+}
+@media screen and (max-width: 1050px){
+  .container{
+    padding-inline: 12vw;
+  }
+}
+@media screen and (max-width: 480px){
+  .container{
+    padding-inline: 3vw;
+  }
+}

@@ -1,0 +1,94 @@
+// Culinary skills.jsx design
+.skills{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    margin-left: 280px;
+    margin-top: 20px;
+}
+.text-skills{
+  text-align: start;
+  max-width: 1000px;
+  margin-left: 20px;
+
+}
+.text-skills h1{
+  font-size: 3.8rem;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-weight: 600;
+  margin-top: -25px;
+}
+
+.text-skills p{
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 28px;
+  text-align: left;
+  padding-left:  14px;
+  border-left: 6px solid rgba(255, 0, 85, 0.671);
+  font-weight: bold;
+  letter-spacing: 4px;
+  transform: translateX(-100%);
+  animation: slideInLeft 0.3s forwards ease-in-out;
+
+  @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
+  }
+
+}
+.text-skills button{
+  padding: .75em 1em;
+  outline: none;
+  border: none;
+  height: 53px;
+  width: 180px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  margin-left: 50%;
+  display: block;
+  transform: translateX(76%);
+  &:hover{
+    box-shadow: 0 1px 3px var(--shadow-color);
+  }
+}
+.pic-skills img{
+  gap: 15px;
+  margin-left: 270px;
+  width: 110%;
+  max-width: 1200px;
+  height: 620px;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 768px){
+  .skills{
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+  }
+  .text-skills{
+      margin-left: -110px;
+  }
+  .pic-skills {
+      margin-left: -710px;
+      width: 93%;
+  }
+  .text-skills button {
+    margin-left: 50%;
+    display: block;
+    transform: translateX(-40%);
+  }
+}

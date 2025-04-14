@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --background-color: #fff;
+  --background-light: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: rgb(255, 0, 86);
+  --text-color: #0A0A0A;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+}
+
+.recipes-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: var(--background-light);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  // Ensures filters and list are stacked properly
+  align-items: center;
+
+  h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    input,
+    select {
+      padding: 12px 15px;
+      font-size: 1rem;
+      border: 1px solid var(--shadow-color);
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      background: #f9f9f9;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 10px rgba(255, 0, 86, 0.4);
+        background: #fff;
+      }
+    }
+
+    select {
+      cursor: pointer;
+    }
+  }
+
+  .recipes-list {
+    display: flex;
+    flex-wrap: wrap; // Allows items to wrap on smaller screens
+    gap: 20px; // Adds space between cards
+    justify-content: center; // Centers the cards
+    align-items: flex-start; // Aligns items at the top
+    width: 100%; 
+    padding: 10px;
+  }
+}
+
+/* Styles spécifiques pour les inputs et select */
+input[type="search"], 
+select {
+  width: 250px;
+  transition: 0.3s;
+}
+
+input[type="search"] {
+  border-radius: 50px;
+  padding-left: 15px;
+}
+
+select {
+  background: white;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Ajout d'un petit effet au survol */
+input:hover, select:hover {
+  transform: scale(1.02);
+}
+
+/* Ajout d'un effet pour les erreurs */
+input:invalid {
+  border: 1px solid red;
+  background: #ffe6e6;
+}
